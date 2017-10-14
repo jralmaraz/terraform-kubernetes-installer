@@ -165,13 +165,13 @@ $ terraform output ssh_private_key > generated/instances_id_rsa
 # Retrieve public IP for etcd nodes
 $ terraform output etcd_public_ips
 # Log in as user opc to the OEL OS
-$ ssh -i `pwd`/generated/instances_id_rsa oel@ETCD_INSTANCE_IP
+$ ssh -i `pwd`/generated/instances_id_rsa opc@ETCD_INSTANCE_IP
 # Retrieve public IP for k8s masters
 $ terraform output master_public_ips
-$ ssh -i `pwd`/generated/instances_id_rsa oel@K8SMASTER_INSTANCE_IP
+$ ssh -i `pwd`/generated/instances_id_rsa opc@K8SMASTER_INSTANCE_IP
 # Retrieve public IP for k8s workers
 $ terraform output worker_public_ips
-$ ssh -i `pwd`/generated/instances_id_rsa oel@K8SWORKER_INSTANCE_IP
+$ ssh -i `pwd`/generated/instances_id_rsa opc@K8SWORKER_INSTANCE_IP
 ```
 
 ### Mandatory Input Variables:
